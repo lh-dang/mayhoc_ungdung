@@ -31,4 +31,6 @@
 ### 7.2. Hướng phát triển
 # TÀI LIỆU THAM KHẢO
 ## DATASETS
-1. https://github.com/nisha077/ARP-SDN-Dataset 
+1. https://github.com/nisha077/ARP-SDN-Dataset
+2. https://data.mendeley.com/datasets/yxzh9fbvbj/2
+3. kaggle
