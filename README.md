@@ -13,6 +13,8 @@
 #### 3.1.1. Đánh giá dữ liệu
 #### 3.1.2. Tiền xử lý dữ liệu
 ### 3.2. Lựa chọn mô hình
+[image](https://github.com/user-attachments/assets/78cd9d5d-321b-4bb0-90a7-4dc24b865de3)
+
 
 ## 4. Cấu hình máy tính
 
