@@ -26,19 +26,46 @@ Tập dữ liệu có sự ```mất cân bằng``` nhãn tương đối lớn, t
 
 Mô tả giải thuật KNN
 
-Giải thuật k láng giềng (kNN) được Fix và Hodges đề xuất từ những năm 1952. Đây là phương pháp rất đơn giản nhưng cũng cho hiệu quả cao trong khai mỏ dữ liệu (Hastie et al., 2009; Wu and Kumar, 2009). Giải thuật kNN không có quá trình học. Khi dự đoán giá trị biến phụ thuộc của phần tử dữ liệu x mới đến, giải thuật đi tìm k láng giềng (k=1, 2, ...) của x từ tập dữ liệu học là các phần tử {(x1,y1), ..., (xk,yk)}, sau đó thực hiện hồi quy với giá trị trung bình của các {y1, ..., yk}. 
+KNN (K-Nearest Neighbors) là một thuật toán học máy phi tham số, học có giám sát, lười (lazy learning), sử dụng cho cả hai mục đích là hồi quy và phân lớp. Thuật toán được Evelyn Fix và Joseph Hodges công bố đầu tiên vào năm 1951 và được Thomas Cover mở rộng sau này vào năm 1967.
+
+Mô hình KNN hoạt động dựa trên nguyên tắc: dữ liệu mới sẽ được phân loại dựa trên các dữ liệu đã có cùng lớp. Cụ thể, thuật toán KNN sẽ tìm ra k điểm dữ liệu đã có gần nhất với dữ liệu mới theo một hàm khoảng cách nào đó (công thức Euclid, Manhattan, Minkowski,...). Sau đó, thuật toán sẽ phân loại dữ liệu mới dựa trên lớp của đa số các điểm k gần nhất.
+
 Quá trình tìm k láng giềng của mẫu mới thường sử dụng khoảng cách Euclidean được định nghĩa như sau:
 
 ![image](https://github.com/user-attachments/assets/192e7d9b-a54a-45c8-adaf-630fa0ba781a)
 
 ,trong đó:  x^(a )và x^b là 2 mẫu độc lập.
+
+Ưu điểm của mô hình KNN
+- Đơn giản và dễ giải thích: Mô hình KNN có cấu trúc đơn giản, dễ hiểu và dễ triển khai.
+- Không đưa ra bất kỳ giả định nào: Mô hình KNN không đưa ra bất kỳ giả định nào về dữ liệu, vì thế nó có thể được sử dụng trong các bài toán phi tuyến tính.
+- Hoạt động tốt trong trường hợp phân loại với nhiều lớp: Mô hình KNN có thể phân loại dữ liệu với nhiều lớp một cách hiệu quả.
+- Sử dụng được trong cả phân loại và hồi quy: Mô hình KNN có thể được sử dụng cho cả hai mục đích là phân loại và hồi quy.
+  
+Nhược điểm của mô hình KNN
+- Yêu cầu nhiều bộ nhớ: Mô hình KNN cần lưu trữ toàn bộ tập dữ liệu, vì thế nó có thể yêu cầu nhiều bộ nhớ, đặc biệt là đối với các tập dữ liệu lớn.
+- Tốn kém về mặt tính toán: Mô hình KNN có thể tốn kém về mặt tính toán, đặc biệt là đối với các tập dữ liệu lớn.
+- Nhạy cảm với nhiễu: Mô hình KNN có thể nhạy cảm với nhiễu trong tập dữ liệu.
+
+
 #### 3.2.2.	Cây Quyết định (Decision Tree):
 ![image](https://github.com/user-attachments/assets/826f10df-5705-4126-83eb-f8140844d437)
 
-Giải thuật học từ dữ liệu là quá trình xây dựng cây bắt đầu từ nút gốc đến nút lá. Đây là giải thuật đệ quy phân hoạch tập dữ liệu theo các biến độc lập thành các phân vùng chữ nhật rời nhau mà ở đó các phần tử dữ liệu xi, xj, ..., xk của cùng phân vùng (nút lá) có các yi, yj, ..., yk là thuần khiết:
-Giống nhau trong vấn đề phân lớp,
-Tương tự nhau trong vấn đề hồi quy. 
-Mô hình cây quyết định sau khi xây dựng thường không mạnh với nhiễu, có tính tổng quát thấp, chỉ cần dữ liệu kiểm tra có thay đổi một ít so với dữ liệu học thì cây quyết định dự báo sai.
+Decision Tree (cây quyết định) là một thuật toán học máy phân loại, có thể được sử dụng để phân loại dữ liệu phân loại và hồi quy. Mô hình hoạt động dựa trên nguyên tắc chia nhỏ dữ liệu thành các nhóm dựa trên các thuộc tính của dữ liệu.
+
+Mô hình Decision Tree được xây dựng theo dạng cây phân cấp, trong đó mỗi nút đại diện cho một thuộc tính của dữ liệu, mỗi cạnh đại diện cho một giá trị của thuộc tính đó và mỗi nút lá đại diện cho một kết quả phân loại.
+
+Ưu điểm của mô hình Decision Tree
+-	Đơn giản và dễ hiểu: Mô hình Decision Tree có cấu trúc đơn giản, dễ hiểu và dễ triển khai.
+-	Không đưa ra bất kỳ giả định nào: Mô hình Decision Tree không đưa ra bất kỳ giả định nào về dữ liệu, vì thế nó có thể được sử dụng trong các bài toán phân loại phi tuyến.
+-	Hoạt động tốt trong trường hợp dữ liệu có ít mẫu: Mô hình Decision Tree có thể hoạt động hiệu quả trong trường hợp dữ liệu có ít mẫu.
+-	Dễ giải thích: Mô hình Decision Tree có thể dễ dàng giải thích, vì nó cung cấp một biểu đồ trực quan thể hiện mối quan hệ giữa các thuộc tính và kết quả phân loại.
+
+Nhược điểm của mô hình Decision Tree
+-	Dễ bị overfitting: Mô hình Decision Tree có thể bị overfitting nếu không được kiểm soát.
+-	Yêu cầu nhiều bộ nhớ: Mô hình Decision Tree có thể yêu cầu nhiều bộ nhớ, đặc biệt là đối với các tập dữ liệu lớn.
+-	Tốn kém về mặt tính toán: Mô hình Decision Tree có thể tốn kém về mặt tính toán, đặc biệt là đối với các tập dữ liệu lớn.
+
 #### 3.2.3.	Rừng Ngẫu nhiên (Random Forest):
 ![image](https://github.com/user-attachments/assets/9afefea4-4af0-4f62-a475-ccbcacaccea5)
 
@@ -47,14 +74,30 @@ Mô hình cây quyết định sau khi xây dựng thường không mạnh với
 Rừng ngẫu nhiên sử dụng một tập hợp cây quyết định độc lập, tạo thành từ các mẫu dữ liệu và tập con của các thuộc tính ngẫu nhiên.
 
 Sau đó, dự đoán của các cây được tổng hợp bằng cách bỏ phiếu hoặc tính trung bình (tuỳ thuộc vào bài toán phân loại hay hồi quy), giúp tạo ra một mô hình mạnh mẽ và ít nhạy cảm với quá khớp.
+Ưu điểm của mô hình Random Forest
+-	Độ chính xác cao: Random Forest thường có độ chính xác cao, đặc biệt là trong các bài toán phân loại với dữ liệu phức tạp.
+-	Kháng overfitting: Random Forest có khả năng kháng overfitting tốt hơn so với mô hình Decision Tree.
+-	Dễ triển khai: Random Forest có cấu trúc đơn giản, dễ triển khai và có thể được sử dụng trong nhiều lĩnh vực khác nhau.
+Nhược điểm của mô hình Random Forest
+-	Yêu cầu nhiều bộ nhớ: Random Forest có thể yêu cầu nhiều bộ nhớ để lưu trữ các cây quyết định.
+-	Tốn kém về mặt tính toán: Random Forest có thể tốn kém về mặt tính toán, đặc biệt là đối với các tập dữ liệu lớn.
+-	Khó giải thích: Random Forest có thể khó giải thích hơn so với mô hình Decision Tree.
 
 #### 3.2.4.	Bagging (Bootstrap Aggregating):
 ![image](https://github.com/user-attachments/assets/71f3c81e-649e-4451-bd13-fbb3ae239f06)
 
+Bagging (Bootstrap aggregating) là một thuật toán học máy thuộc nhóm ensemble learning, được sử dụng để phân loại và hồi quy. Mô hình hoạt động dựa trên nguyên tắc xây dựng nhiều mô hình phân loại hoặc hồi quy yếu, sau đó kết hợp kết quả của các mô hình này để cải thiện hiệu quả.
 
-Bagging là một kỹ thuật trong học máy, thường dùng để cải thiện độ chính xác và giảm thiểu hiện tượng quá khớp (overfitting) của mô hình.
+Trong quá trình xây dựng các mô hình phân loại hoặc hồi quy yếu, Bagging sẽ lấy ngẫu nhiên các mẫu dữ liệu từ tập dữ liệu huấn luyện. Điều này giúp giảm thiểu mức độ overfitting của các mô hình yếu và của mô hình tổng thể.
 
-Kỹ thuật này tạo ra nhiều mẫu dữ liệu (bằng cách lấy mẫu ngẫu nhiên với thay thế) từ tập huấn luyện ban đầu và huấn luyện các mô hình riêng biệt trên mỗi mẫu này. Sau đó, dự đoán cuối cùng được lấy trung bình hoặc theo đa số từ các mô hình thành phần. 
+Ưu điểm của mô hình Bagging
+-	Độ chính xác cao: Bagging thường có độ chính xác cao, đặc biệt là trong các bài toán phân loại với dữ liệu phức tạp.
+-	Kháng overfitting: Bagging có khả năng kháng overfitting tốt hơn so với các thuật toán học máy khác.
+-	Dễ triển khai: Bagging có cấu trúc đơn giản, dễ triển khai và có thể được sử dụng trong nhiều lĩnh vực khác nhau.
+Nhược điểm của mô hình Bagging
+-	Yêu cầu nhiều bộ nhớ: Bagging có thể yêu cầu nhiều bộ nhớ để lưu trữ các mô hình phân loại hoặc hồi quy yếu.
+-	Tốn kém về mặt tính toán: Bagging có thể tốn kém về mặt tính toán, đặc biệt là đối với các tập dữ liệu lớn.
+
 
 
 [mohinh_decu](https://github.com/user-attachments/assets/78cd9d5d-321b-4bb0-90a7-4dc24b865de3)
