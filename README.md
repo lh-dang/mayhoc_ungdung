@@ -153,6 +153,14 @@ Bagging sử dụng kỹ thuật Bootstrapping để tạo ra các tập dữ li
 Đối với dự đoán, Bagging sẽ cho mỗi dữ liệu mới đi qua tất cả các mô hình con (các cây quyết định). Sau đó, kết quả cuối cùng được xác định bằng cách bỏ phiếu đa số (voting) cho các mô hình phân loại hoặc tính trung bình nếu là mô hình hồi quy.
 
 ## 6. Đánh giá mô hình
+Trong quá trình phát triển mô hình phân loại, việc đánh giá hiệu suất là một bước quan trọng để đảm bảo rằng mô hình không chỉ học từ dữ liệu đào tạo mà còn có khả năng dự đoán chính xác trên dữ liệu mới. 
+
+Có nhiều chỉ số quan trọng được sử dụng để đánh giá mô hình, trong đó F1 Score, Recall, Accuracy, và Precision đóng vai trò quan trọng, mang lại cái nhìn đa chiều về hiệu suất của mô hình.
+-	Accuracy, mặc dù là một chỉ số phổ biến, nhưng cũng cần phải được xem xét một cách cẩn thận. Nó đo lường tỷ lệ giữa số lượng dự đoán đúng và tổng số mẫu, nhưng không nhất thiết là lựa chọn tốt nhất đối với dữ liệu mất cân bằng, vì nó có thể bị ảnh hưởng bởi sự thiên lệ của mô hình đối với lớp đa số.
+-	Precision, hoặc độ chính xác của dự đoán tích cực, tập trung vào việc đo lường khả năng của mô hình trong việc không tạo ra quá nhiều dự đoán sai tích cực. Nếu mục tiêu là giảm False Positives, Precision trở nên quan trọng.
+-	Recall, hay còn gọi là độ nhớ, tập trung vào việc đo lường khả năng của mô hình trong việc bao quát tất cả các trường hợp tích cực. Nếu mục tiêu là đảm bảo không bỏ sót những trường hợp quan trọng, Recall trở nên quan trọng, vì nó đo lường tỷ lệ của các dự đoán tích cực đúng so với tổng số thực sự tích cực.
+-	F1 Score, một chỉ số tổng hợp của Precision và Recall, là một phép đo hiệu suất toàn diện. F1 Score thích hợp cho các tình huống mô hình đối mặt với dữ liệu mất cân bằng, nơi sự kết hợp giữa việc giảm False Positives và False Negatives là quan trọng. Nó là một con số duy nhất có thể đo lường cân bằng giữa độ chính xác của mô hình trong việc dự đoán tích cực và khả năng tìm ra tất cả các trường hợp tích cực.
+
 ### 6.1. Kết quả của các mô hình
 ### 6.2. Đánh giá chi tiết từng mô hình
 
