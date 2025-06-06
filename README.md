@@ -135,7 +135,7 @@ Quá trình phân chia này tiếp tục lặp lại cho từng nhánh con. Vớ
 
 Để tối ưu hiệu suất của cây quyết định, Grid Search được sử dụng nhằm tìm ra các giá trị tốt nhất cho các tham số quan trọng của mô hình, như độ sâu tối đa của cây hoặc số lượng mẫu tối thiểu trong mỗi nhánh. Các tham số không nằm trong quá trình tìm kiếm tối ưu sẽ được giữ nguyên ở giá trị mặc định.
 
-### 5.3. Rừng ngẫu nhiên
+### 5.3. Rừng ngẫu nhiên (Random Forest)
 Mô hình hoạt động theo cơ chế tạo ra nhiều cây quyết định. Cách xây dựng mỗi cây quyết định như sau:
 
 Dùng kỹ thuật Bootstrapping để lấy tập n dữ liệu từ tập dữ liệu ban đầu. Từ tập n dữ liệu này, chỉ chọn ngẫu nhiên ở k thuộc tính (k<n), tức lúc này sẽ có bộ dữ liệu mới gồm n dữ liệu và mỗi dữ liệu có k thuộc tính. 
@@ -160,6 +160,7 @@ Bagging sử dụng kỹ thuật Bootstrapping để tạo ra các tập dữ li
 ### 7.1. Kết quả đạt được
 ### 7.2. Hướng phát triển
 # TÀI LIỆU THAM KHẢO
+- [1]. Đỗ Thanh Nghị, Phạm Nguyên Khang, Giáo trình nguyên lý máy học, Đại học Cần Thơ, Cần Thơ, 2012.
 ## DATASETS
 1. https://github.com/nisha077/ARP-SDN-Dataset
 2. https://data.mendeley.com/datasets/yxzh9fbvbj/2
