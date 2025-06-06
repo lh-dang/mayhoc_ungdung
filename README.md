@@ -169,6 +169,7 @@ Có nhiều chỉ số quan trọng được sử dụng để đánh giá mô h
 ### 7.2. Hướng phát triển
 # TÀI LIỆU THAM KHẢO
 - [1]. Đỗ Thanh Nghị, Phạm Nguyên Khang, Giáo trình nguyên lý máy học, Đại học Cần Thơ, Cần Thơ, 2012.
+- [2]. Slide bài giảng học phần Máy Học Ứng Dụng CT294 – Thầy Mã Trường Thành (Trường CNTT & TT).
 ## DATASETS
 1. https://github.com/nisha077/ARP-SDN-Dataset
 2. https://data.mendeley.com/datasets/yxzh9fbvbj/2
