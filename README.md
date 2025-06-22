@@ -178,3 +178,4 @@ Có nhiều chỉ số quan trọng được sử dụng để đánh giá mô h
 4. [OPML](https://www.openml.org/search?type=data&status=any&sort=runs&id=4534)
 5. [kitsune-mitm-test](https://www.kaggle.com/code/smeyra/kitsune-mitm-test)
 6. [kitsune-mitm-attack-detection](https://www.kaggle.com/code/smeyra/kitsune-mitm-attack-detection)
+7. [MITM (IoT)](https://link.springer.com/article/10.1007/s43926-025-00104-w#Abs1)
