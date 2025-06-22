@@ -176,4 +176,5 @@ Có nhiều chỉ số quan trọng được sử dụng để đánh giá mô h
 3. kaggie
    [image](https://github.com/user-attachments/assets/a7fc59a0-1b52-4ff2-91fc-2fb19a9652f8)
 4. [OPML](https://www.openml.org/search?type=data&status=any&sort=runs&id=4534)
-
+5. [kitsune-mitm-test](https://www.kaggle.com/code/smeyra/kitsune-mitm-test)
+6. [kitsune-mitm-attack-detection](https://www.kaggle.com/code/smeyra/kitsune-mitm-attack-detection)
