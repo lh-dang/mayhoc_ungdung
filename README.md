@@ -180,3 +180,4 @@ Có nhiều chỉ số quan trọng được sử dụng để đánh giá mô h
 6. [kitsune-mitm-attack-detection](https://www.kaggle.com/code/smeyra/kitsune-mitm-attack-detection)
 7. [MITM (IoT)](https://link.springer.com/article/10.1007/s43926-025-00104-w#Abs1)
 8. [Detecting_End-Point_EP_Man-In-The-Middle_MITM_Attack_based_on_ARP_Analysis_A_Machine_Learning_Approach(Báo kkhoa học)](https://www.researchgate.net/publication/347947532_Detecting_End-Point_EP_Man-In-The-Middle_MITM_Attack_based_on_ARP_Analysis_A_Machine_Learning_Approach)
+9. [Phát hiện tấn công mitm ở phía máy khách (báo khoa họchọc)](https://github.com/Maheshmuddunuru/MITM-Detection-Mechanism-at-client-side-using-Machine-Learning-Algorithms/blob/main/Final_research_report.pdf)
