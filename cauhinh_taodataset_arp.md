@@ -1,5 +1,7 @@
 ## Sơ đồ mạng
-![image](https://github.com/user-attachments/assets/a6fa3461-3fe5-4d77-96eb-c85c41baae1f)
+
+![image](https://github.com/user-attachments/assets/d57440dc-cd4e-41ba-a20a-6f56896fdde9)
+
 
 |Thiết Bị|Địa chỉ ip|Địa chỉ MAC|
 |--------|----------|-----------|
