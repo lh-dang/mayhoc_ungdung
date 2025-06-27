@@ -1,3 +1,19 @@
+## DỮ LIỆU THU ĐƯỢC TỪ wireshark
+- **timestamp:** thời điểm gửi/nhận gói tin
+- **protocal:**
+- **length-Packet size:** kích thước gói tin
+- **src_mac:** *nằm trên khung ethernet* MAC của thiết bị thực sự gửi gói tin đi (vận chuyển thật trên mạng LAN)
+- **dst_mac:** *nằm trên khung ethernet* MAC của thiết bị thực sự nhận gói tin đi (vận chuyển thật trên mạng LAN)
+- **arp_opcode:** loại gói tin, *tấn công arp thường liên quan đến việc gửi quá nhiều reply giả mạo*
+  - 1: ARP Request (Yêu cầu ARP).
+  - 2: ARP Reply (Phản hồi ARP).
+  - Các opcode khác (như RARP) ít phổ biến hơn.  
+- **arp_src_ip:** địa chỉ ip nguồn trong gói arp
+- **arp_src_mac:** địa chỉ mac nguồn trong gói arp
+- **arp_dst_ip:** địa chỉ ip đích trong gói arp
+- **arp_dst_mac:** địa chỉ mac nguồn trong gói arp
+
+
 ### 🧠 1. Nhiều gói ARP Reply không có ARP Request tương ứng
 - Trong giao thức ARP bình thường, một ARP Reply chỉ được gửi sau khi có ARP Request.
 
