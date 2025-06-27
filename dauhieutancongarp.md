@@ -12,6 +12,44 @@
 - **arp_src_mac:** địa chỉ mac nguồn trong gói `arp`
 - **arp_dst_ip:** địa chỉ ip đích trong gói `arp`
 - **arp_dst_mac:** địa chỉ mac nguồn trong gói `arp`
+## TRÍCH ĐẶC TRƯNG (DẤU HIỆU TẤN CÔNG)
+- **Số lượng ARP Request/Reply trong một khoảng thời gian:** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
+  - Số ARP Request/giây
+  - Số ARP Reply/giây
+- **Gói ARP Reply không có ARP Request tương ứng trước đó**
+- **Tỷ lệ ARP Reply/Request bất thường:** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
+- **Bảng ARP Cache (ARP Table) của các thiết bị:** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
+- **Sự xuất hiện của nhiều MAC cho một IP:** Dấu hiệu của ARP Spoofing khi nhiều thiết bị khác nhau tuyên bố sở hữu cùng một IP.
+- **Lưu lượng từ các máy có MAC giả mạo:** Kiểm tra xem có sự gia tăng đột biến lưu lượng từ một MAC cụ thể không.
+- **Giao tiếp bất thường giữa các thiết bị:** Ví dụ, một máy đột nhiên trở thành gateway (MITM - Man-in-the-Middle).
+## GÁN NHÃN CHO DATASET(label)
+- 0: normal
+- 1: attack arp
+## Các đặc trưng (Features) có thể sử dụng trong ML
+- Tần suất gói ARP (ARP packet rate).
+- Tỷ lệ ARP Reply không hợp lệ (Unsolicited ARP Replies).
+- Sự thay đổi MAC-IP (MAC-IP binding changes).
+- Sự trùng lặp MAC cho nhiều IP (MAC duplication).
+- Thời gian giữa các gói ARP (Inter-arrival time of ARP packets).
+## Công cụ thu thập dữ liệu
+- Wirehasrk: Bắt gói tin ARP
+- Scapy(Python): Tạo và phân tích gói tin
+## Một số thuật toán ML có thể áp dụng
+- Phân loại (Classification):
+  - Random Forest
+  - SVM (Support Vector Machine)
+  - Neural Networks
+- Phát hiện bất thường (Anomaly Detection):
+  - Isolation Forest
+  - One-Class SVM
+  - Autoencoders (Deep Learning)
+
+
+
+
+
+
+
 
 
 ### 🧠 1. Nhiều gói ARP Reply không có ARP Request tương ứng
