@@ -16,7 +16,7 @@
 - **1. `(arp_rate_per_sec)` Tần xuất gói tin trong một khoảng thời gian:** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
   - Phát hiện flood ARP (Request/Reply vượt ngưỡng)
   - Ngưỡng thông thường: <5 gói/giây, tấn công: >50-100 gói/giây
-- **2. `(is_unsolicited)` Tỷ lệ ARP Reply/Request:** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
+- **2. `(is_unsolicited)` Reply bất thường** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
   - Bình thường: Reply chỉ sau Request
   - Tấn công: Reply không được yêu cầu (unsolicited)
 - **3. `(mac_change)` Thay đổi ARP Cache(ARP Table):** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
@@ -30,6 +30,7 @@
 - **9. Tần suất thay đổi MAC**
 - **10. `arp_count_per_mac_per_sec`Tổng gói tin mỗi giây từ một địa chỉ MAC**
   - lấy địa chỉ mac từ arp_src_mac
+-  **Tỷ lệ ARP Reply/Request:**
 ## GÁN NHÃN CHO DATASET(label)
 - 0: normal
 - 1: attack arp
