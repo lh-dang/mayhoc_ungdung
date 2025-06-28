@@ -13,15 +13,17 @@
 - **arp_dst_ip:** địa chỉ ip đích trong gói `arp`
 - **arp_dst_mac:** địa chỉ mac nguồn trong gói `arp`
 ## TRÍCH ĐẶC TRƯNG (DẤU HIỆU TẤN CÔNG)
-- **Số lượng ARP Request/Reply trong một khoảng thời gian:** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
+- **Số lượng ARP Request/Reply trong một khoảng thời gian:(arp_rate_per_sec)** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
   - Số ARP Request/giây
   - Số ARP Reply/giây
-- **Gói ARP Reply không có ARP Request tương ứng trước đó**
-- **Tỷ lệ ARP Reply/Request bất thường:** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
-- **Bảng ARP Cache (ARP Table) của các thiết bị:** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
-- **Sự xuất hiện của nhiều MAC cho một IP:** Dấu hiệu của ARP Spoofing khi nhiều thiết bị khác nhau tuyên bố sở hữu cùng một IP.
+- **Tỷ lệ ARP Reply/Request bất thường:(is_unsolicited)** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
+- **Bảng ARP Cache (ARP Table) của các thiết bị: (mac_change)** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
+- **Sự xuất hiện của nhiều MAC cho một IP: (mac_duplicate)** Dấu hiệu của ARP Spoofing khi nhiều thiết bị khác nhau tuyên bố sở hữu cùng một IP.
 - **Lưu lượng từ các máy có MAC giả mạo:** Kiểm tra xem có sự gia tăng đột biến lưu lượng từ một MAC cụ thể không.
 - **Giao tiếp bất thường giữa các thiết bị:** Ví dụ, một máy đột nhiên trở thành gateway (MITM - Man-in-the-Middle).
+- **Khoản thời gian giữa các gói tin:(time_diff)**
+- **Tổng gói tin của một địa chỉ ip: `src_ip_count`**
+- **Tổng gói tin của địa chỉ mac: `src_mac_count`**
 ## GÁN NHÃN CHO DATASET(label)
 - 0: normal
 - 1: attack arp
