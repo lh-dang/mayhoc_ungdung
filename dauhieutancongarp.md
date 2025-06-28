@@ -1,29 +1,35 @@
 ## DỮ LIỆU THU ĐƯỢC TỪ wireshark
-- **timestamp:** thời điểm gửi/nhận gói tin
-- **protocal:**
-- **length-Packet size:** kích thước gói tin
-- **src_mac:** `nằm trên khung ethernet` MAC của thiết bị thực sự gửi gói tin đi (vận chuyển thật trên mạng LAN)
-- **dst_mac:** `nằm trên khung ethernet` MAC của thiết bị thực sự nhận gói tin đi (vận chuyển thật trên mạng LAN)
-- **arp_opcode:** loại gói tin, *tấn công arp thường liên quan đến việc gửi quá nhiều reply giả mạo*
+- **1. timestamp:** thời điểm gửi/nhận gói tin
+- **2. protocol:**
+- **3. length-Packet size:** kích thước gói tin
+- **4. src_mac:** `nằm trên khung ethernet` MAC của thiết bị thực sự gửi gói tin đi (vận chuyển thật trên mạng LAN)
+- **5. dst_mac:** `nằm trên khung ethernet` MAC của thiết bị thực sự nhận gói tin đi (vận chuyển thật trên mạng LAN)
+- **6. arp_opcode:** loại gói tin, *tấn công arp thường liên quan đến việc gửi quá nhiều reply giả mạo*
   - 1: ARP Request (Yêu cầu ARP).
   - 2: ARP Reply (Phản hồi ARP).
   - Các opcode khác (như RARP) ít phổ biến hơn.  
-- **arp_src_ip:** địa chỉ ip nguồn trong gói `arp`
-- **arp_src_mac:** địa chỉ mac nguồn trong gói `arp`
-- **arp_dst_ip:** địa chỉ ip đích trong gói `arp`
-- **arp_dst_mac:** địa chỉ mac nguồn trong gói `arp`
+- **7. arp_src_ip:** địa chỉ ip nguồn trong gói `arp`
+- **8. arp_src_mac:** địa chỉ mac nguồn trong gói `arp`
+- **9. arp_dst_ip:** địa chỉ ip đích trong gói `arp`
+- **10. arp_dst_mac:** địa chỉ mac nguồn trong gói `arp`
 ## TRÍCH ĐẶC TRƯNG (DẤU HIỆU TẤN CÔNG)
-- **Số lượng ARP Request/Reply trong một khoảng thời gian:(arp_rate_per_sec)** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
-  - Số ARP Request/giây
-  - Số ARP Reply/giây
-- **Tỷ lệ ARP Reply/Request bất thường:(is_unsolicited)** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
-- **Bảng ARP Cache (ARP Table) của các thiết bị: (mac_change)** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
-- **Sự xuất hiện của nhiều MAC cho một IP: (mac_duplicate)** Dấu hiệu của ARP Spoofing khi nhiều thiết bị khác nhau tuyên bố sở hữu cùng một IP.
-- **Lưu lượng từ các máy có MAC giả mạo:** Kiểm tra xem có sự gia tăng đột biến lưu lượng từ một MAC cụ thể không.
-- **Giao tiếp bất thường giữa các thiết bị:** Ví dụ, một máy đột nhiên trở thành gateway (MITM - Man-in-the-Middle).
-- **Khoản thời gian giữa các gói tin:(time_diff)**
-- **Tổng gói tin của một địa chỉ ip: `src_ip_count`**
-- **Tổng gói tin của địa chỉ mac: `src_mac_count`**
+- **1. `(arp_rate_per_sec)` Tần xuất gói tin trong một khoảng thời gian:** Tấn công ARP thường tạo ra một lượng lớn gói tin ARP trong thời gian ngắn.
+  - Phát hiện flood ARP (Request/Reply vượt ngưỡng)
+  - Ngưỡng thông thường: <5 gói/giây, tấn công: >50-100 gói/giây
+- **2. `(is_unsolicited)` Tỷ lệ ARP Reply/Request:** Thông thường, ARP Reply chỉ được gửi khi có Request, nhưng trong tấn công, kẻ tấn công có thể gửi Reply mà không có Request.
+  - Bình thường: Reply chỉ sau Request
+  - Tấn công: Reply không được yêu cầu (unsolicited)
+- **3. `(mac_change)` Thay đổi ARP Cache(ARP Table):** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
+- **4. `(mac_duplicate)` Sự xuất hiện của nhiều MAC cho một IP: ** xung đột địa chỉ mac.
+- **5. `(src_mac_count)` Lưu lượng từ các máy có MAC giả mạo:** Kiểm tra xem có sự gia tăng đột biến lưu lượng từ một MAC cụ thể không.
+- **6. `gateway_change`Giao tiếp bất thường giữa các thiết bị:** Ví dụ, một máy đột nhiên trở thành gateway (MITM - Man-in-the-Middle).
+- **7. `(time_diff)`Khoản thời gian giữa các gói tin:**
+  - Bình thường 1 phút 1 gói arp
+  - Khi bị tấn công 1 phút > 20 gói
+- **#Tổng gói tin của một địa chỉ ip: `src_ip_count`**
+- **8. Tổng gói tin của địa chỉ mac mỗi giây: `src_mac_count`**
+- **9. Tần suất thay đổi MAC**
+- **#Tỷ lệ Reply/Request theo IP**
 ## GÁN NHÃN CHO DATASET(label)
 - 0: normal
 - 1: attack arp
@@ -45,7 +51,7 @@
   - Isolation Forest
   - One-Class SVM
   - Autoencoders (Deep Learning)
-
+##############################################################
 
 
 
