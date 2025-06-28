@@ -28,6 +28,8 @@
   - Khi bị tấn công 1 phút > 20 gói
 - **8. Tổng gói tin của địa chỉ mac mỗi giây: `src_mac_count`**
 - **9. Tần suất thay đổi MAC**
+- **`arp_count_per_mac_per_sec`10. Tổng gói tin từ một địa chỉ mac mỗi giây**
+  - lấy địa chỉ mac từ arp_src_mac
 ## GÁN NHÃN CHO DATASET(label)
 - 0: normal
 - 1: attack arp
