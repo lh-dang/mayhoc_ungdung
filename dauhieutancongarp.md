@@ -20,13 +20,12 @@
   - Bình thường: Reply chỉ sau Request
   - Tấn công: Reply không được yêu cầu (unsolicited)
 - **3. `(mac_change)` Thay đổi ARP Cache(ARP Table):** Theo dõi sự thay đổi đột ngột của cặp IP-MAC (ví dụ: một IP đột nhiên được ánh xạ sang một MAC khác).
-- **4. `(mac_duplicate)` Sự xuất hiện của nhiều MAC cho một IP: ** xung đột địa chỉ mac.
+- **4. `(mac_duplicate)` Sự xuất hiện của nhiều MAC cho một IP:** xung đột địa chỉ mac.
 - **5. `(src_mac_count)` Tổng gói tin từ một địa chỉ MAC:** Kiểm tra xem có sự gia tăng đột biến lưu lượng từ một MAC cụ thể không.
 - **6. `gateway_change`Giao tiếp bất thường giữa các thiết bị:** Ví dụ, một máy đột nhiên trở thành gateway (MITM - Man-in-the-Middle).
 - **7. `(time_diff)`Khoản thời gian giữa các gói tin:**
   - Bình thường 1 phút 1 gói arp
   - Khi bị tấn công 1 phút > 20 gói
-- **8. Tổng gói tin của địa chỉ mac mỗi giây: `src_mac_count`**
 - **9. Tần suất thay đổi MAC**
 - **10. `arp_count_per_mac_per_sec`Tổng gói tin mỗi giây từ một địa chỉ MAC**
   - lấy địa chỉ mac từ arp_src_mac
