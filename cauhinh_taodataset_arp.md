@@ -40,7 +40,8 @@ arp -a
 vi /etc/network/interfaces
 ```
 #### 🧾 nội dung
-```auto lo
+```
+auto lo
 iface lo inet loopback
 
 auto eth0
