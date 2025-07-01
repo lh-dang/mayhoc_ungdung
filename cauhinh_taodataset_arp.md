@@ -75,3 +75,5 @@ rc-update add networking default
 |ubuntu 01|192.168.10.4|08:00:27:f6:8e:2e|
 |ubuntu 1|192.168.10.3|00:0c:29:c7:d3:01|
 |gateway|192.168.10.1|c2:01:27:10:00:00|
+## MÔ HÌNH NGÀY 30/6
+![image](https://github.com/user-attachments/assets/a2cf82b2-66eb-4d1c-9b41-7036e6b30d84)
